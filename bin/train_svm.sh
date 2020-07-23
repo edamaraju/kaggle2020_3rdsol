@@ -8,6 +8,7 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python main_svm.py store.model_name=svm_rbf
 
@@ -20,6 +21,7 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python main_svm.py store.model_name=svm_linear kernel=linear
 

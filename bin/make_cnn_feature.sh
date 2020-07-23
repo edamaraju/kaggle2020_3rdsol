@@ -8,6 +8,7 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python scripts/make_cnn_feature.py
 

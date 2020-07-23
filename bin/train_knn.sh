@@ -7,5 +7,6 @@ docker run --rm -it \
     --shm-size=64gb \
     --runtime=nvidia \
     --ipc=host\
+    --network none \
     kaggle/pytorch:trends \
     python main_knn.py store.model_name=knn

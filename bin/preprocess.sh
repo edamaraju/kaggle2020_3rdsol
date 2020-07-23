@@ -14,6 +14,7 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python scripts/make_voxel_stats.py
 
@@ -26,5 +27,6 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python scripts/make_fnc_matrix.py

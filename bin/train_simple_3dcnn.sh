@@ -18,6 +18,7 @@ for is_train in true false; do
         --runtime=nvidia \
         --ipc=host \
         --security-opt seccomp=unconfined \
+        --network none \
         kaggle/pytorch:trends \
         python main_nn.py \
             base.opt_name=adam \

@@ -8,6 +8,7 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python main_ridge.py store.model_name=ridge use_bagging=False
 
@@ -20,5 +21,6 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python main_ridge.py store.model_name=ridge_bagging use_bagging=True

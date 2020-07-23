@@ -8,5 +8,6 @@ docker run --rm -it \
     --runtime=nvidia \
     --ipc=host \
     --security-opt seccomp=unconfined \
+    --network none \
     kaggle/pytorch:trends \
     python main_nusvm.py store.model_name=nusvm
